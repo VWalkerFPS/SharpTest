@@ -1,12 +1,14 @@
 <div align="center">
 
+<img src="Assets/app-icon.png" width="140" alt="SharpTest App Icon">
+
 # SharpTest
 
 ### Native iOS application for learning C# through interactive quizzes
 
 Built with **Swift**, **UIKit**, **MVVM**, and the **Coordinator** pattern.
 
-Programmatic UI • Clean Architecture • UIKit • No Storyboards
+Programmatic UI • UIKit • Clean Architecture • No Storyboards (except Launch Screen)
 
 </div>
 
@@ -14,21 +16,23 @@ Programmatic UI • Clean Architecture • UIKit • No Storyboards
 
 # 📱 Screenshots
 
-| Tests | Quiz | Results |
-|:------:|:----:|:-------:|
-| ![](Screenshots/tests.png) | ![](Screenshots/quiz.png) | ![](Screenshots/result.png) |
+<p align="center">
+  <img src="Screenshots/tests.png" width="230" alt="Tests Screen"/>
+  <img src="Screenshots/quiz.png" width="230" alt="Quiz Screen"/>
+  <img src="Screenshots/result.png" width="230" alt="Result Screen"/>
+</p>
 
 ---
 
 # ✨ Features
 
 - 📚 Browse available C# quizzes
-- ✅ Multiple correct answers support
-- 📈 Quiz progress tracking
 - 📝 Interactive quiz interface
-- 🎯 Result screen with score
-- 💾 Local data storage using UserDefaults
-- 🧩 Programmatic UIKit interface
+- ✅ Support for multiple correct answers
+- 📈 Quiz progress tracking
+- 🎯 Result screen with score summary
+- 💾 Local storage using UserDefaults
+- 🧩 Fully programmatic UIKit interface
 - 🏛 MVVM architecture
 - 🧭 Coordinator-based navigation
 
@@ -41,34 +45,37 @@ Programmatic UI • Clean Architecture • UIKit • No Storyboards
 | Language | Swift |
 | UI | UIKit |
 | Architecture | MVVM |
-| Navigation | Coordinator |
+| Navigation | Coordinator Pattern |
 | Layout | Auto Layout |
 | Storage | UserDefaults |
-| Patterns | Repository Pattern |
-| Lists | UITableView |
+| Design Patterns | Repository Pattern |
 
 ---
 
 # 🏛 Architecture
 
-The application follows the **MVVM** architecture.
+The application follows the **MVVM** architecture with the **Coordinator** pattern responsible for navigation.
 
-Navigation between screens is handled using the **Coordinator** pattern.
-
-```text
-App
-│
-├── Navigation
-│   ├── AppCoordinator
-│   └── TestsCoordinator
-│
-├── Models
-├── Services
-├── Repositories
-├── Storage
-├── ViewModels
-├── ViewControllers
-└── Views
+```
+AppCoordinator
+      │
+      ▼
+TestsCoordinator
+      │
+      ▼
+ViewController
+      │
+      ▼
+ViewModel
+      │
+      ▼
+QuizService
+      │
+      ▼
+Repository
+      │
+      ▼
+UserDefaults
 ```
 
 ---
@@ -96,19 +103,25 @@ SharpTest
 
 # 🚀 Getting Started
 
-### Clone the repository
+## Requirements
+
+- macOS
+- Xcode 16+
+- iOS 18+
+
+## Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/SharpTest.git
+git clone https://github.com/VWalkerFPS/SharpTest.git
 ```
 
-### Open the project
+## Open the project
 
 ```
 SharpTest.xcodeproj
 ```
 
-### Run
+## Run
 
 Build and run the application in Xcode.
 
@@ -131,14 +144,30 @@ Build and run the application in Xcode.
 
 ---
 
+# 📖 What I Learned
+
+During the development of this project I practiced:
+
+- Building a UIKit application without Storyboards
+- Designing an application using MVVM
+- Separating navigation with the Coordinator pattern
+- Managing application state with ViewModels
+- Working with Auto Layout programmatically
+- Organizing code using Repository and Service layers
+- Persisting local data with UserDefaults
+
+---
+
 # 👨‍💻 Author
 
 **Dmitry Chebotarev**
 
-Aspiring iOS Developer
+Junior iOS Developer
 
 Swift • UIKit • MVVM • Coordinator
 
 ---
 
-If you found this project interesting, feel free to ⭐ the repository.
+## License
+
+This project was created for educational and portfolio purposes.

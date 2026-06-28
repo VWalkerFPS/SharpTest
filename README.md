@@ -17,9 +17,9 @@ Programmatic UI • UIKit • Clean Architecture • No Storyboards (except Laun
 # 📱 Screenshots
 
 <p align="center">
-  <img src="Screenshots/tests.png" width="230" alt="Tests Screen"/>
-  <img src="Screenshots/quiz.png" width="230" alt="Quiz Screen"/>
-  <img src="Screenshots/result.png" width="230" alt="Result Screen"/>
+  <img src="Screenshots/tests.PNG" width="230" alt="Tests Screen"/>
+  <img src="Screenshots/quiz.PNG" width="230" alt="Quiz Screen"/>
+  <img src="Screenshots/result.PNG" width="230" alt="Result Screen"/>
 </p>
 
 ---
